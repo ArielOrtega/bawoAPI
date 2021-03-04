@@ -14,7 +14,7 @@
 	<name>bawoAPI</name>
 	<description>API application for Bawo</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>15</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
