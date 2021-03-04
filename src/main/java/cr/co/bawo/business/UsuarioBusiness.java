@@ -12,7 +12,19 @@ public class UsuarioBusiness {
 	@Autowired
 	private UsuarioData usuarioData;
 	
-	public Usuario findUsuario(String nombre, String contrasenna) {
-		return usuarioData.findUsuario(nombre, contrasenna);
+	public Usuario find(String nombre, String contrasenna) {
+		return usuarioData.find(nombre, contrasenna);
+	}
+	
+	public Usuario insert(String nombre, String contrasenna) {
+		return usuarioData.insert(nombre, contrasenna);
+	}
+	
+	public Usuario update(String nombre, String contrasenna) {
+		return usuarioData.update(nombre, contrasenna);
+	}
+	
+	public Usuario delete(String nombre, String contrasenna) {
+		return usuarioData.delete(nombre, contrasenna);
 	}
 }

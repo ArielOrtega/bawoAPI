@@ -17,7 +17,7 @@ public class UsuarioData {
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 	
-	public Usuario findUsuario(String nombre, String contrasenna) {
+	public Usuario find(String nombre, String contrasenna) {
 		Usuario usuario = this.jdbcTemplate.queryForObject(
 		        "Call getUsuario('"+nombre+"','"+contrasenna+"')",
 		        new RowMapper<Usuario>() {
@@ -29,5 +29,20 @@ public class UsuarioData {
 		            }
 		        });
 		return usuario;
+	}
+	
+	public Usuario update(String nombre, String contrasenna) {
+		this.jdbcTemplate.update("Call updateUsuario('"+nombre+"','"+contrasenna+"')");
+		return new Usuario(nombre, contrasenna);
+	}
+	
+	public Usuario insert(String nombre, String contrasenna) {
+		this.jdbcTemplate.update("Call saveUsuario('"+nombre+"','"+contrasenna+"')");
+		return new Usuario(nombre, contrasenna);
+	}
+	
+	public Usuario delete(String nombre, String contrasenna) {
+		this.jdbcTemplate.update("Call deleteUsuario('"+nombre+"','"+contrasenna+"')");
+		return new Usuario(nombre, contrasenna);
 	}
 }
