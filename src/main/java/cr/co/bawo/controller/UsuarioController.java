@@ -18,7 +18,7 @@ public class UsuarioController {
 	@Autowired
 	private UsuarioBusiness usuarioBusiness;
 	
-	@GetMapping("/user")
+	@GetMapping("/about")
 	public Usuario find(Model model, @RequestParam("usuario") String usuario, @RequestParam("contrasenna") String contrasenna) {
 		return usuarioBusiness.find(usuario, contrasenna);
 	}

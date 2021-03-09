@@ -16,7 +16,7 @@ public class UsuarioDataTest {
 	
 	@Test
 	public void findUsuario() {
-		Usuario usuario = usuarioData.findUsuario("administrador", "bawo2021");
+		Usuario usuario = usuarioData.find("administrador", "bawo2021");
 		assertNotNull(usuario);
 	}
 }
