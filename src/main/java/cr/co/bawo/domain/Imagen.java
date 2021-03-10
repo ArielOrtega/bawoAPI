@@ -5,20 +5,20 @@ public class Imagen {
 		private int codigoImagen;
 		private String nombre;
 		private String urlImagen;
-		private Empresa empresa;
+		private int codigoEmpresa;
 		
 		public Imagen() {
 			this.codigoImagen = 0;
 			this.nombre = "";
 			this.urlImagen = "";
-			this.empresa = null;
+			this.codigoEmpresa = 0;
 		}
 
-		public Imagen(int codigoImagen, String nombre, String urlImagen, Empresa empresa) {
+		public Imagen(int codigoImagen, String nombre, String urlImagen, int codigoEmpresa) {
 			this.codigoImagen = codigoImagen;
 			this.nombre = nombre;
 			this.urlImagen = urlImagen;
-			this.empresa = empresa;
+			this.codigoEmpresa = codigoEmpresa;
 		}
 
 		public int getCodigoImagen() {
@@ -45,11 +45,11 @@ public class Imagen {
 			this.urlImagen = urlImagen;
 		}
 
-		public Empresa getEmpresa() {
-			return empresa;
+		public int getCodigoEmpresa() {
+			return codigoEmpresa;
 		}
 
-		public void setEmpresa(Empresa empresa) {
-			this.empresa = empresa;
+		public void setCodigoEmpresa(int codigoEmpresa) {
+			this.codigoEmpresa = codigoEmpresa;
 		}
 }
