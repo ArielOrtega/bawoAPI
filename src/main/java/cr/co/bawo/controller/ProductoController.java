@@ -25,7 +25,7 @@ public class ProductoController {
 	@Autowired
 	ProductoBusiness productoBusiness;
 
-	@GetMapping("/")
+	@GetMapping("/view/allProducts")
 	public List<Producto> find(Model model) {
 		return productoBusiness.findAll();
 	}
