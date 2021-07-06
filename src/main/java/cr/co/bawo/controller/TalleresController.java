@@ -5,43 +5,28 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import cr.co.bawo.business.ProductoBusiness;
-import cr.co.bawo.domain.Producto;
+import cr.co.bawo.business.TalleresBusiness;
+import cr.co.bawo.domain.Talleres;
 
 
 @RestController
 @CrossOrigin(origins = "*")
-@RequestMapping("/api/product")
-public class ProductoController {
+@RequestMapping("/api/talleres")
+public class TalleresController {
 	
 	@Autowired
-	ProductoBusiness productoBusiness;
+	TalleresBusiness talleresBusiness;
 
-	@GetMapping("/view/allProducts")
-	public List<Producto> find(Model model) {
-		return productoBusiness.findAll();
-	}
-	
-	@GetMapping("/name")
-	public List<Producto> findByName(Model model, @RequestParam("nombre") String nombre) {
-		return productoBusiness.findByName(nombre);
-	}
-	
-	@GetMapping("/Category")
-	public List<Producto> findByCategory(Model model, @RequestParam("codigoCategoria") int codigo) {
-		return productoBusiness.findByCategory(codigo);
+	@GetMapping("/view/allTalleres")
+	public List<Talleres> findAll(Model model) {
+		return talleresBusiness.findAll();
 	}
 	
 
-	
 	//@PostMapping("/product")
 	//public void insert(Model model, @RequestParam("nombre") String nombre, @RequestParam("precio") float precio, @RequestParam("informacionNutricional") String informacionNutricional, @RequestParam("descripcion") String descripcion, @RequestParam("imagen") String imagen,
 	//		@RequestParam("codigoCategoria") int codigoCategoria) {

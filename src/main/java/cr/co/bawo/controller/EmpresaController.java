@@ -21,7 +21,7 @@ public class EmpresaController {
 	@Autowired
 	EmpresaBusiness empresaBusiness;
 	
-	@GetMapping("/")
+	@GetMapping("/view/AllCompanies")
 	public Empresa find(Model model) {
 		return empresaBusiness.find();
 	}

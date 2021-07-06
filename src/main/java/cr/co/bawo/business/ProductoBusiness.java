@@ -30,19 +30,12 @@ public class ProductoBusiness {
 		return productoData.findByCategory(categoryCode);
 	}
 
-	public Producto find(int codigo) {
-		return productoData.find(codigo);
-	}
 
 	public void insert(String nombre, float precio, String informacionNutricional, String descripcion, String imagen,
 			int codigoCategoria) {
 		productoData.insert(nombre, precio, informacionNutricional, descripcion, imagen, codigoCategoria);
 	}
 
-	public Producto update(int codigo, String nombre, float precio, String informacionNutricional, String descripcion,
-			String imagen, int codigoCategoria) {
-		return productoData.update(codigo, nombre, precio, informacionNutricional, descripcion, imagen, codigoCategoria);
-	}
 
 	public void delete(int codigo) {
 		productoData.delete(codigo);;

@@ -24,7 +24,7 @@ public class ImagenData {
 		return imagenes;
 	}
 
-	public Imagen find(int codigo) {
+	public Imagen findImage(int codigo) {
 		Imagen imagen = this.jdbcTemplate.queryForObject("Call getImagen('" + codigo + "')",
 				new RowMapper<Imagen>() {
 					public Imagen mapRow(ResultSet rs, int rowNum) throws SQLException {

@@ -24,7 +24,7 @@ public class CategoriaController {
 	@Autowired
 	private CategoriaBusiness categoriaBusiness;
 	
-	@GetMapping("/")
+	@GetMapping("/view/AllCategories")
 	public List<Categoria> find(Model model) {
 		return categoriaBusiness.find();
 	}

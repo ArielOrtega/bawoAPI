@@ -24,15 +24,15 @@ public class ImagenController {
 	@Autowired
 	ImagenBusiness imagenBusiness;
 	
-	@GetMapping("/")
+	@GetMapping("/view/AllImages")
 	public List<Imagen> find(Model model) {
 		return imagenBusiness.findAll();
 	}
 	
-	//@GetMapping("/image/find")
-	//public Imagen find(Model model, @RequestParam("codigoImagen") int codigoImagen) {
-	//	return imagenBusiness.find(codigoImagen);
-	//}
+	@GetMapping("/image/findById")
+	public Imagen find(Model model, @RequestParam("codigoImagen") int codigoImagen) {
+		return imagenBusiness.find(codigoImagen);
+	}
 	
 	//@PostMapping("/image")
 	//public void insert(Model model, @RequestParam("nombre") String nombre, @RequestParam("urlImagen") String urlImagen, @RequestParam("codigoEmpresa") int codigoEmpresa) {

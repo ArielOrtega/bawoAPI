@@ -19,7 +19,7 @@ public class ImagenBusiness {
 	}
 
 	public Imagen find(int codigo) {
-		return imagenData.find(codigo);
+		return imagenData.findImage(codigo);
 	}
 
 	public void insert(String nombre, String urlImagen, int codigoEmpresa) {

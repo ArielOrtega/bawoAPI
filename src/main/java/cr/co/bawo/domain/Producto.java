@@ -7,7 +7,7 @@ public class Producto {
 		private float precio;
 		private String informacionNutricional;
 		private String descripcion;
-		private String imagen;
+		private Imagen imagen;
 		private Categoria categoria;
 		
 		public Producto() {
@@ -16,19 +16,19 @@ public class Producto {
 			this.precio = 0;
 			this.informacionNutricional = "";
 			this.descripcion = "";
-			this.imagen = "";
+			this.imagen = null;
 			this.categoria = null;
 		}
 
 		public Producto(int codigo, String nombre, float precio, String informacionNutricional, String descripcion,
-				String imagen, Categoria categoria) {
+				 Imagen imagen, Categoria categoria) {
 			this.codigo = codigo;
 			this.nombre = nombre;
 			this.precio = precio;
 			this.informacionNutricional = informacionNutricional;
 			this.descripcion = descripcion;
-			this.imagen = imagen;
 			this.categoria = categoria;
+			this.imagen = imagen;
 		}
 
 		public int getCodigo() {
@@ -71,11 +71,11 @@ public class Producto {
 			this.descripcion = descripcion;
 		}
 
-		public String getImagen() {
+		public Imagen getImagen() {
 			return imagen;
 		}
 
-		public void setImagen(String imagen) {
+		public void setImagen(Imagen imagen) {
 			this.imagen = imagen;
 		}
 
